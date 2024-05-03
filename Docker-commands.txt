@@ -1,0 +1,15 @@
+                                                Docker Commands
+
+
+docker --version                                              To get version of docker
+yum install docker                                            To install docker
+docker images                                                 To list Images
+docker ps                                                     To list running containers
+docker ps -a                                                  To list all containers
+docker run -it (image-id)                                     To create containers
+exit                                                          To exit and stop the container
+ctrl+p+q                                                      To quit , contaier will be in running state
+docker stop container-id                                      To stop the container
+docker start container-id                                     To start the container
+docker attach container-id                                    To attach the container
+docker exec -it container-id /bin/bash                        To start and attach the container
