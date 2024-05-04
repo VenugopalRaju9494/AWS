@@ -13,3 +13,28 @@ docker stop container-id                                      To stop the contai
 docker start container-id                                     To start the container
 docker attach container-id                                    To attach the container
 docker exec -it container-id /bin/bash                        To start and attach the container
+
+
+
+docker run -itd -p ____:80 image-id                           To create port for the container
+
+
+docker rm    container-id
+docker rm -f container-id                                     To delete container
+
+
+docker rmi    image-id
+docker rmi -f image-id                                        To delete image
+
+docker rmi $(docker images -q)                                To delete all images
+docker rm  $(docker ps -aq)                                   To delete all containers
+docker stop $(docker ps -a -q)                                To stop all containers
+
+
+docker rename oldname newname                                 To change name to container
+docker logs container-id                                      To check log of container
+docker history container-id                                   To show history of container
+docker inspect container-id                                   To inspect container
+docker build -t "name" .                                      To create image with dockerfile
+
+docker run -itd --name contname --hostname devserver -p ___:80 imageid             To create container with name,port,hostname
