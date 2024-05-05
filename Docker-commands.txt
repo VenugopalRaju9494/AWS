@@ -38,3 +38,18 @@ docker inspect container-id                                   To inspect contain
 docker build -t "name" .                                      To create image with dockerfile
 
 docker run -itd --name contname --hostname devserver -p ___:80 imageid             To create container with name,port,hostname
+                                              
+
+                                                            Docker volumes
+
+docker run -it -v /opt/remu:/opt/remu image-id                          To create container volume with host
+docker run -it --volumes-from container-id image-id                     To create container volume with another container
+
+docker volume create Revanth-vol                                        To create volume
+docker volume ls                                                        To list volume
+
+
+                                                            Docker Network
+docker network ls                                     To list networks
+docker network create Remu                            To create network
+docker inspect network-name                           To inspect network
