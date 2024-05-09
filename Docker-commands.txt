@@ -6,7 +6,8 @@ yum install docker                                            To install docker
 docker images                                                 To list Images
 docker ps                                                     To list running containers
 docker ps -a                                                  To list all containers
-docker run -it (image-id)                                     To create containers
+docker run -it (image-id) /bin/bash                           To create containers and get inside
+docker run -itd (image-id)                                    To create containers
 exit                                                          To exit and stop the container
 ctrl+p+q                                                      To quit , contaier will be in running state
 docker stop container-id                                      To stop the container
@@ -17,6 +18,7 @@ docker exec -it container-id /bin/bash                        To start and attac
 
 
 docker run -itd -p ____:80 image-id                           To create port for the container
+docker run -itd -P image-id                                   To create port automatically
 
 
 docker rm    container-id
@@ -32,10 +34,11 @@ docker stop $(docker ps -a -q)                                To stop all contai
 
 
 docker rename oldname newname                                 To change name to container
-docker logs container-id                                      To check log of container
-docker history container-id                                   To show history of container
+docker logs container-id                                      To check history of container
+docker history image-id                                       To show history of image
 docker inspect container-id                                   To inspect container
 docker build -t "name" .                                      To create image with dockerfile
+docker commit container-id "image-name"                       To create image with container
 
 docker run -itd --name contname --hostname devserver -p ___:80 imageid             To create container with name,port,hostname
                                               
